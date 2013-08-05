@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{01525EB1-90B3-4E0C-8CF5-D64920F10C91}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>iportogruaroIOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>iportogruaroIOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ISIOS;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchI18n />
+    <MtouchArch>ARMv7</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ISIOS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchI18n />
+    <MtouchArch>ARMv7</MtouchArch>
+    <CodesignProvision>3DCA4E83-3AD0-4F84-A109-DA2902A832D2</CodesignProvision>
+    <IpaPackageName />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DefineConstants>ISIOS</DefineConstants>
+    <BuildIpa>true</BuildIpa>
+    <CodesignProvision>B1EA635C-6B26-48D8-8B76-850355D34F40</CodesignProvision>
+    <IpaPackageName />
+    <MtouchI18n />
+    <MtouchArch>ARMv7</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <BuildIpa>true</BuildIpa>
+    <ConsolePause>false</ConsolePause>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <DefineConstants>ISIOS</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <DefineConstants>ISIOS</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="System.Json" />
+    <Reference Include="System.Data" />
+    <Reference Include="Mono.Data.Sqlite" />
+    <Reference Include="MonoTouch.Dialog-1" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="ParseTouch">
+      <HintPath>..\Components\parse-1.1.1\lib\ios\ParseTouch.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="model\" />
+    <Folder Include="cache\" />
+    <Folder Include="Rules\" />
+    <Folder Include="Request\" />
+    <Folder Include="UI\" />
+    <Folder Include="Code\" />
+    <Folder Include="Code\Loading\" />
+    <Folder Include="images\" />
+    <Folder Include="Code\source\" />
+    <Folder Include="UI\customCell\" />
+    <Folder Include="images\icons\" />
+    <Folder Include="images\mainBar\" />
+    <Folder Include="images\secondBar\" />
+    <Folder Include="images\moreInfo\" />
+    <Folder Include="images\about\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="RootViewController.cs" />
+    <Compile Include="RootViewController.designer.cs">
+      <DependentUpon>RootViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetailViewController.cs" />
+    <Compile Include="DetailViewController.designer.cs">
+      <DependentUpon>DetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\iportogruaroLibraryShared\iportogruaroLibraryShared\model\modelMainCategoris.cs">
+      <Link>model\modelMainCategoris.cs</Link>
+    </Compile>
+    <Compile Include="..\..\iportogruaroLibraryShared\iportogruaroLibraryShared\Rules\mainCategorys.cs">
+      <Link>Rules\mainCategorys.cs</Link>
+    </Compile>
+    <Compile Include="..\..\iportogruaroLibraryShared\iportogruaroLibraryShared\request\requesttoServer.cs">
+      <Link>Request\requesttoServer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\iportogruaroLibraryShared\iportogruaroLibraryShared\cache\dataCache.cs">
+      <Link>cache\dataCache.cs</Link>
+    </Compile>
+    <Compile Include="..\..\iportogruaroLibraryShared\iportogruaroLibraryShared\Rules\subCategorys.cs">
+      <Link>Rules\subCategorys.cs</Link>
+    </Compile>
+    <Compile Include="Code\baseView.cs" />
+    <Compile Include="Code\Loading\LoadingHUDView.cs" />
+    <Compile Include="UI\UIHomeScreen.cs" />
+    <Compile Include="UI\UIHomeScreen.designer.cs">
+      <DependentUpon>UIHomeScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\source\sourceMainCategory.cs" />
+    <Compile Include="UI\customCell\mainItem.cs" />
+    <Compile Include="UI\UiCategoryListController.cs" />
+    <Compile Include="Code\source\sourceSecondCategory.cs" />
+    <Compile Include="UI\UiDetailScreen.cs" />
+    <Compile Include="UI\UiDetailScreen.designer.cs">
+      <DependentUpon>UiDetailScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\iportogruaroLibraryShared\iportogruaroLibraryShared\model\iportogruaropos.cs">
+      <Link>model\iportogruaropos.cs</Link>
+    </Compile>
+    <Compile Include="..\..\iportogruaroLibraryShared\iportogruaroLibraryShared\Rules\Mainiportogruaropos.cs">
+      <Link>Rules\Mainiportogruaropos.cs</Link>
+    </Compile>
+    <Compile Include="UI\UiPosListController.cs" />
+    <Compile Include="Code\source\sourcePosItems.cs" />
+    <Compile Include="UI\customCell\posItem.cs" />
+    <Compile Include="UI\UiMapScreen.cs" />
+    <Compile Include="UI\UiMapScreen.designer.cs">
+      <DependentUpon>UiMapScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\maitem.cs" />
+    <Compile Include="UI\UiIpadDetailScreen.cs" />
+    <Compile Include="UI\UiIpadDetailScreen.designer.cs">
+      <DependentUpon>UiIpadDetailScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\cmbShare.cs" />
+    <Compile Include="Code\source\sourceMoreInfo.cs" />
+    <Compile Include="UI\customCell\moreinfoItem.cs" />
+    <Compile Include="UI\UiPosMoreInfoListController.cs" />
+    <Compile Include="..\..\iportogruaroLibraryShared\iportogruaroLibraryShared\model\eventos.cs">
+      <Link>model\eventos.cs</Link>
+    </Compile>
+    <Compile Include="..\..\iportogruaroLibraryShared\iportogruaroLibraryShared\Rules\mainEventos.cs">
+      <Link>Rules\mainEventos.cs</Link>
+    </Compile>
+    <Compile Include="UI\customCell\eventItem.cs" />
+    <Compile Include="UI\UiEventsListController.cs" />
+    <Compile Include="Code\source\sourceEvents.cs" />
+    <Compile Include="..\..\iportogruaroLibraryShared\iportogruaroLibraryShared\model\noticias.cs">
+      <Link>model\noticias.cs</Link>
+    </Compile>
+    <Compile Include="..\..\iportogruaroLibraryShared\iportogruaroLibraryShared\Rules\mainNews.cs">
+      <Link>Rules\mainNews.cs</Link>
+    </Compile>
+    <Compile Include="UI\customCell\newsItem.cs" />
+    <Compile Include="Code\source\sourceNews.cs" />
+    <Compile Include="UI\UiNewsListController.cs" />
+    <Compile Include="UI\UiWebView.cs" />
+    <Compile Include="UI\UiWebView.designer.cs">
+      <DependentUpon>UiWebView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\broserDelegate.cs" />
+    <Compile Include="..\..\iportogruaroLibraryShared\iportogruaroLibraryShared\model\galeriaImagenes.cs">
+      <Link>model\galeriaImagenes.cs</Link>
+    </Compile>
+    <Compile Include="..\..\iportogruaroLibraryShared\iportogruaroLibraryShared\model\shareOptions.cs">
+      <Link>model\shareOptions.cs</Link>
+    </Compile>
+    <Compile Include="UI\UiGaleryScreen.cs" />
+    <Compile Include="UI\UiGaleryScreen.designer.cs">
+      <DependentUpon>UiGaleryScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\utilsApp.cs" />
+    <Compile Include="Code\Loading\MbProgressHud.cs" />
+    <Compile Include="..\..\iportogruaroLibraryShared\iportogruaroLibraryShared\model\gpsRoute.cs">
+      <Link>model\gpsRoute.cs</Link>
+    </Compile>
+    <Compile Include="..\..\iportogruaroLibraryShared\iportogruaroLibraryShared\Rules\routeJson.cs">
+      <Link>Rules\routeJson.cs</Link>
+    </Compile>
+    <Compile Include="MissingApiView.cs" />
+    <Compile Include="Code\InternetConnection.cs" />
+    <Compile Include="UI\UIEventDetail.cs" />
+    <Compile Include="UI\UIEventDetail.designer.cs">
+      <DependentUpon>UIEventDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UiPosList.cs" />
+    <Compile Include="UI\UiPosList.designer.cs">
+      <DependentUpon>UiPosList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UiPosListiPad.cs" />
+    <Compile Include="UI\UiPosListiPad.designer.cs">
+      <DependentUpon>UiPosListiPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UiPosListiPhone.cs" />
+    <Compile Include="UI\UiPosListiPhone.designer.cs">
+      <DependentUpon>UiPosListiPhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UiCategoryList.cs" />
+    <Compile Include="UI\UiCategoryList.designer.cs">
+      <DependentUpon>UiCategoryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\customCell\UiGridView.cs" />
+    <Compile Include="UI\UiGaleryScreenIpad.cs" />
+    <Compile Include="UI\UiGaleryScreenIpad.designer.cs">
+      <DependentUpon>UiGaleryScreenIpad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIAbout.cs" />
+    <Compile Include="UI\UIAbout.designer.cs">
+      <DependentUpon>UIAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CreatePopupSocialNetwork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="RootViewController.xib" />
+    <InterfaceDefinition Include="DetailViewController.xib" />
+    <InterfaceDefinition Include="UI\UIHomeScreen.xib" />
+    <InterfaceDefinition Include="UI\UiDetailScreen.xib" />
+    <InterfaceDefinition Include="UI\UiMapScreen.xib" />
+    <InterfaceDefinition Include="UI\UiIpadDetailScreen.xib" />
+    <InterfaceDefinition Include="UI\UiWebView.xib" />
+    <InterfaceDefinition Include="UI\UiGaleryScreen.xib" />
+    <InterfaceDefinition Include="UI\UIEventDetail.xib" />
+    <InterfaceDefinition Include="UI\UiPosListiPad.xib" />
+    <InterfaceDefinition Include="UI\UiPosListiPhone.xib" />
+    <InterfaceDefinition Include="UI\UiCategoryList_iPhone.xib" />
+    <InterfaceDefinition Include="UI\UiCategoryList_iPad.xib" />
+    <InterfaceDefinition Include="UI\UiGaleryScreenIpad.xib" />
+    <InterfaceDefinition Include="UI\UIAbout_iPhone.xib" />
+    <InterfaceDefinition Include="UI\UIAbout_iPad.xib" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="images\ic_menu_down.png" />
+    <BundleResource Include="images\ic_title_share_default.png" />
+    <BundleResource Include="images\icons\Icon-72.png" />
+    <BundleResource Include="images\icons\Icon-Small-50.png" />
+    <BundleResource Include="images\icons\Icon-Small.png" />
+    <BundleResource Include="images\icons\Icon-Small%402x.png" />
+    <BundleResource Include="images\icons\Icon.png" />
+    <BundleResource Include="images\icons\Icon%402x.png" />
+    <BundleResource Include="Resources\Icon-72.png" />
+    <BundleResource Include="Resources\Icon-Small-50.png" />
+    <BundleResource Include="Resources\Icon-Small.png" />
+    <BundleResource Include="Resources\Icon-Small%402x.png" />
+    <BundleResource Include="Resources\Icon.png" />
+    <BundleResource Include="Resources\Icon%402x.png" />
+    <BundleResource Include="images\secondBar\gallery%402x.png" />
+    <BundleResource Include="images\secondBar\info%402x.png" />
+    <BundleResource Include="images\secondBar\gallery.png" />
+    <BundleResource Include="images\secondBar\info.png" />
+    <BundleResource Include="images\secondBar\map%402x.png" />
+    <BundleResource Include="images\secondBar\moreinfo.png" />
+    <BundleResource Include="images\secondBar\moreinfo%402x.png" />
+    <BundleResource Include="images\secondBar\map.png" />
+    <BundleResource Include="images\icons\DefaultIcon.png" />
+    <BundleResource Include="images\icons\km.png" />
+    <BundleResource Include="images\mainBar\Barra_Home.png" />
+    <BundleResource Include="images\mainBar\Barra_Home%402x.png" />
+    <BundleResource Include="images\mainBar\Barra_Servizi.png" />
+    <BundleResource Include="images\mainBar\Barra_Servizi%402x.png" />
+    <BundleResource Include="images\mainBar\Barra_Numeri_Utili.png" />
+    <BundleResource Include="images\mainBar\Barra_Numeri_Utili%402x.png" />
+    <BundleResource Include="images\mainBar\Barra_Eventi.png" />
+    <BundleResource Include="images\mainBar\Barra_Eventi%402x.png" />
+    <BundleResource Include="images\moreInfo\Address.png" />
+    <BundleResource Include="images\moreInfo\Mail.png" />
+    <BundleResource Include="images\moreInfo\Maps.png" />
+    <BundleResource Include="images\moreInfo\Phone.png" />
+    <BundleResource Include="images\moreInfo\Website.png" />
+    <BundleResource Include="images\moreInfo\GoogleMaps.png" />
+    <BundleResource Include="images\img_1.png" />
+    <BundleResource Include="images\img_2.png" />
+    <BundleResource Include="images\img_4.png" />
+    <BundleResource Include="images\img_5.png" />
+    <BundleResource Include="images\img_3.png" />
+    <BundleResource Include="images\NOIMG.png" />
+    <BundleResource Include="images\DefaultPos.png" />
+    <BundleResource Include="images\about\CNA.png" />
+    <BundleResource Include="images\about\Confartigianato.png" />
+    <BundleResource Include="images\about\TS.png" />
+    <BundleResource Include="images\about\coldiretti.png" />
+    <BundleResource Include="images\about\confcommercio.png" />
+    <BundleResource Include="images\about\portogruaro.png" />
+    <BundleResource Include="Resources\Icon-72%402x.png" />
+    <BundleResource Include="Resources\Icon-Small-50%402x.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\Default-Portrait.png" />
+    <BundleResource Include="Resources\Default-Landscape.png" />
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+    <BundleResource Include="Resources\Default-Landscape%402x.png" />
+    <BundleResource Include="Default.png" />
+    <BundleResource Include="Default%402x.png" />
+    <BundleResource Include="Default-568h%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="parse">
+      <InstallationInProgress>False</InstallationInProgress>
+      <Version>1.1.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MapWithRoutes\MapWithRoutes.csproj">
+      <Project>{342F2BE7-B3E7-4FFC-A099-285A6E5F3EA2}</Project>
+      <Name>MapWithRoutes</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="Resources\iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+  </ItemGroup>
+</Project>
